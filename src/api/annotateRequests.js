@@ -3,10 +3,7 @@ import axios from 'axios'
 let baseURL = 'https://weak-stars-stick.loca.lt/api/annotate'
 
 const myinstance = axios.create({
-    baseURL,
-    headers : {
-        'bypass-tunnel-reminder' : true
-    }
+    baseURL
 })
 
 export const requests = {
