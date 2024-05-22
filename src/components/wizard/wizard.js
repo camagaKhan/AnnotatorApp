@@ -45,7 +45,7 @@ const CommentWizard = () => {
                 </Row>
                 <h1>Comment:</h1>
                 <p>{context.comment && context.comment.USER_COMMENT}</p>
-                <Select mode = 'multiple' className="target-labels" size='large' onChange={onChangeLabels} options={context.labels.map(l => {
+                <Select mode = 'multiple' className="target-labels" size='large' value={context.labelsChosen} onChange={onChangeLabels} options={context.labels.map(l => {
                     return { value : l.LabelID, label: l.Labels }
                 })} />
                 <Button type='primary' onClick={btnNextLogicAsync} size='large'>Next (Total comments to Annotate: { context.commentsCount})</Button>
