@@ -15,7 +15,7 @@ const AppRoutes = observer(() => {
   if (context.isAuthenticated)
   {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/AnnotatorApp">
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/login' element={<Login />} />
@@ -30,7 +30,7 @@ const AppRoutes = observer(() => {
   }
   else {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/AnnotatorApp">
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/login' element={<Login />} />
