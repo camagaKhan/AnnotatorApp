@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-let baseURL = 'https://vast-swans-double.loca.lt/api/annotate'
+let baseURL = 'https://weak-stars-stick.loca.lt/api/annotate'
 
-axios.create({
+const myinstance = axios.create({
     baseURL,
     headers : {
         'bypass-tunnel-reminder' : true
@@ -11,11 +11,11 @@ axios.create({
 
 export const requests = {
     get: async (url) => {
-        const { data } = await axios.get(url)
+        const { data } = await myinstance.get(url)
         return data
     },
     post : async (url, obj) => {
-        return await axios.post(url, obj)
+        return await myinstance.post(url, obj)
     }
 }
 
