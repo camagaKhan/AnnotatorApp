@@ -32,7 +32,8 @@ export class AppStore {
             logout: action,
             getTargetsAsync: action,
             getLabelsChosen: action,
-            submitAnnotationAsync: action
+            submitAnnotationAsync: action,
+            refreshLabels: action
         })
     }
 
@@ -81,6 +82,10 @@ export class AppStore {
 
     getLabelsChosen = (value) => {
         this.labelsChosen = value
+    }
+
+    refreshLabels = () => {
+        this.labelsChosen = []
     }
 
     submitAnnotationAsync = async (commentId) => {

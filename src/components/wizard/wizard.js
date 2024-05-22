@@ -19,6 +19,7 @@ const CommentWizard = () => {
         context.submitAnnotationAsync(commentId)
         let idx = context.incrementCommentIdx(), comment = context.comments[idx]
         context.decreaseCommentSize()
+        context.refreshLabels()
         navigate(`/annotateComment/${comment.CommentID}`)
     }
 
