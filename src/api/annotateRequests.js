@@ -1,9 +1,12 @@
 import axios from 'axios'
 
-let baseURL = 'https://weak-stars-stick.loca.lt/api/annotate'
+let baseURL = 'https://cute-actors-smell.loca.lt/api/annotate'
 
 const myinstance = axios.create({
-    baseURL
+    baseURL,
+    headers: {
+        'bypass-tunnel-reminder': 'https://camagakhan.github.io/AnnotatorApp/'
+    }
 })
 
 export const requests = {
