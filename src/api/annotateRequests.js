@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let baseURL = 'http://localhost:5011/api/annotate'
+let baseURL = 'https://cool-lines-fly.loca.lt/api/annotate'
 
 export const requests = {
     get: async (url) => {

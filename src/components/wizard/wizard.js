@@ -15,7 +15,7 @@ const CommentWizard = () => {
         if (commentId) context.setComment(parseInt(commentId))
     }, [commentId, context])
 
-    const btnNextLogicAsync = async () => {
+    const btnAnnotateLogicAsync = async () => {
         context.submitAnnotationAsync(commentId)
         let idx = context.incrementCommentIdx(), comment = context.comments[idx]
         context.decreaseCommentSize()
@@ -48,7 +48,7 @@ const CommentWizard = () => {
                 <Select mode = 'multiple' className="target-labels" size='large' value={context.labelsChosen} onChange={onChangeLabels} options={context.labels.map(l => {
                     return { value : l.LabelID, label: l.Labels }
                 })} />
-                <Button type='primary' onClick={btnNextLogicAsync} size='large'>Next (Total comments to Annotate: { context.commentsCount})</Button>
+                <Button type='primary' onClick={btnAnnotateLogicAsync} size='large'>Annotate (Total comments to Annotate: { context.commentsCount})</Button>
             </div>
         </div>
     )
