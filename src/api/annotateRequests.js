@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let baseURL = 'https://short-doodles-guess.loca.lt/api/annotate' //'https://fancy-cycles-jam.loca.lt/api/annotate'
+let baseURL = 'https://tough-corners-prove.loca.lt/api/annotate' //'https://fancy-cycles-jam.loca.lt/api/annotate'
 
 const myinstance = axios.create({
     baseURL,
