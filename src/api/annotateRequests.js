@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-let baseURL = ' https://solid-lights-punch.loca.lt/api/annotate' //'https://fancy-cycles-jam.loca.lt/api/annotate'
+let baseURL = 'https://camagakhan.ngrok.app/api/annotate' //'https://fancy-cycles-jam.loca.lt/api/annotate'
 
 const myinstance = axios.create({
     baseURL,
-    headers: {
-        'bypass-tunnel-reminder': 'https://camagakhan.github.io/AnnotatorApp/'
-    }
+    // headers: {
+    //     'bypass-tunnel-reminder': 'https://camagakhan.github.io/AnnotatorApp/'
+    // }
 })
 
 export const requests = {
