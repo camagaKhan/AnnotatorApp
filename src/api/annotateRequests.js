@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let baseURL = 'https://camagakhan.ngrok.app/api/annotate' //'https://fancy-cycles-jam.loca.lt/api/annotate'
+const baseURL = 'http://localhost:5011/api/annotate'//'https://camagakhan.ngrok.app/api/annotate' //'https://fancy-cycles-jam.loca.lt/api/annotate'
 
 const myinstance = axios.create({
     baseURL,

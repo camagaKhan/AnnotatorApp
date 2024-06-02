@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import AppContext from "../Hooks/AppContext"
 import { observer } from "mobx-react"
 import { useNavigate, useParams } from "react-router-dom"
-import { Button, Col, Row, Select } from "antd"
+import { Button, Col, Row, Select, message } from "antd"
 import {
     LogoutOutlined,
     RightOutlined
@@ -10,13 +10,14 @@ import {
 import './wizard.css'
 
 const CommentWizard = () => {
-    const context = useContext(AppContext), { commentId } = useParams(), navigate = useNavigate()
+    const context = useContext(AppContext), { commentId } = useParams(), navigate = useNavigate() 
 
-    useEffect(() => {
-        if (commentId) context.setComment(parseInt(commentId))
-    }, [commentId, context])
+    useEffect (() => {
+        context.setAnnotatorStateAsync(commentId)
+    }, [commentId, context]) 
 
     const btnAnnotateLogicAsync = async () => {
+        if (context.labelsChosen.length === 0) return message.warning('Please choose a label from the "Target" list. If the comment is "Not Offensive" select the "Not Offensive" item from the list.')
         context.submitAnnotationAsync(commentId)
         let idx = context.incrementCommentIdx(), comment = context.comments[idx]
         context.decreaseCommentSize()
@@ -57,21 +58,22 @@ const CommentWizard = () => {
                         </Button>
                     </Col>
                 </Row>
+
+                <div>
+                    <p>1) Read the comment.</p>
+                    <p>2) Choose one or more labels to describe the comment. If a comment does not fit any of the provided labels, please select "Not Offensive."</p>
+                    <p>3) When ready tap/click on the <strong>"Annotate (Total comments to Annotate: { context.commentsCount})"</strong> button to annotate it.</p>
+                    <p>4) Tap/Click on the Skip button to skip the comment</p>
+                    <p>5) Tap/Click "{<LogoutOutlined />}" button to end session. </p>
+                </div>
+
                 <h1>Comment:</h1>
-                <p><i>"{context.comment && context.comment.USER_COMMENT}"</i> - User</p>
+                <p><i>{context.comment && context.comment.USER_COMMENT}</i></p>
 
                 <label style={{padding:'15px 0 15px 0', fontWeight: 'bold'}}>Target:</label>
                 <Select mode = 'multiple' className="target-labels" size='large' value={context.labelsChosen} onChange={onChangeLabels} options={context.labels.map(l => {
                     return { value : l.LabelID, label: l.Labels }
                 })} />
-
-                <div>
-                    <p>1) Read the comment.</p>
-                    <p>2) Choose one or more labels to describe the comment.</p>
-                    <p>3) When ready tap/click on the <strong>"Annotate (Total comments to Annotate: { context.commentsCount})"</strong> button to annotate it.</p>
-                    <p>4) Tap/Click on the Skip button to skip the comment</p>
-                    <p>5) Tap/Click "{<LogoutOutlined />}" button to end session. </p>
-                </div>
 
                 <Button type='primary' onClick={btnAnnotateLogicAsync} size='large'>Annotate (Total comments to Annotate: { context.commentsCount})</Button>
             </div>

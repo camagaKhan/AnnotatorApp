@@ -20,15 +20,21 @@ function Login () {
 
     return (
         <div className="app-container container-layout" >
+            <div className="letter-container login-text pad-container">
+                <p>Dear Participant,</p>
+                <p>We are pleased to invite you to participate in an important annotation exercise aimed at improving our understanding of online discourse in Malta.</p> 
+                <p>As a participant, you will be provided with a list of comments from the Times of Malta and Malta Today. Your task is to annotate these comments based on the given categories. If a comment does not fit any of the provided labels, please select "Not Offensive." Your valuable input will contribute to creating a dataset that will train a Toxic Comment Classifier AI Model specifically using comments from your news portals.</p>
+                <h5>Important Notes:</h5>
+                <p>1) No personal data will be stored during this exercise.</p>
+                <p>2) You may choose to quit at any time without any consequences..</p>
+                <p>Thank you for considering this opportunity to contribute to our research.</p>
+                <p>Best regards, <br /> Liam Mulvaney.</p>
+            </div>
             <div className="login-container container-layout">
                 <Button type="primary" className="btn-login" size="large" onClick={loginLogicAsync}>
-                    Login
+                    Start
                 </Button>
-            </div>            
-
-            <div className="login-container login-text pad-container">
-                <small>Help us annotate our comments for a safer space. <i>(No personal data will be stored for this study).</i></small>
-            </div>
+            </div>  
         </div>        
     )
 }
