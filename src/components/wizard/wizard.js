@@ -70,7 +70,7 @@ const CommentWizard = () => {
                 <h1>Comment:</h1>
                 <p><i>{context.comment && context.comment.USER_COMMENT}</i></p>
 
-                <label style={{padding:'15px 0 15px 0', fontWeight: 'bold'}}>Target:</label>
+                <label id='lbl-target'>Target:</label>
                 <Select mode = 'multiple' className="target-labels" size='large' value={context.labelsChosen} onChange={onChangeLabels} options={context.labels.map(l => {
                     return { value : l.LabelID, label: l.Labels }
                 })} />
