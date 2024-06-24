@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/AnnotatorApp/static/css/main.8cfda83a.css",
+    "main.js": "/AnnotatorApp/static/js/main.727afced.js",
+    "static/media/smiley.jpg": "/AnnotatorApp/static/media/smiley.12b5ad7391eb7589bf9c.jpg",
+    "index.html": "/AnnotatorApp/index.html",
+    "main.8cfda83a.css.map": "/AnnotatorApp/static/css/main.8cfda83a.css.map",
+    "main.727afced.js.map": "/AnnotatorApp/static/js/main.727afced.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8cfda83a.css",
+    "static/js/main.727afced.js"
+  ]
+}
