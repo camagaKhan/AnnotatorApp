@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; URL='./index.html'" />
+    <script>
+      // This script will redirect the user to the index.html file and preserve the original path
+      var path = window.location.pathname;
+      var hash = window.location.hash;
+      var search = window.location.search;
+      window.location.replace('/index.html?redirect=' + path + search + hash);
+    </script>
+  </head>
+  <body></body>
+</html>
