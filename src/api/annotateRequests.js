@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'https://annotator.camagakhan.com/api/annotate'
+const baseURL = 'https://annotator.camagakhan.com/api/annotate' // backend url
 
 const myinstance = axios.create({
     baseURL
