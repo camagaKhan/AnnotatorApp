@@ -41,7 +41,13 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 622px) {
+    .letter-container {
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 1165px) {
 
     .login-container {
         padding: 7px;
@@ -57,7 +63,7 @@
         width:70%;
         background-color: white;
         border-radius: 6px;
-        padding: 7px;
+        padding: 7px;        
     }
 
     p {
@@ -70,7 +76,10 @@
   } 
 
 
-@media (min-width: 1300px) {
+
+
+
+@media (min-width: 1670px) {
     .letter-container,    .login-container {
         width: 30%;
         padding:15px;

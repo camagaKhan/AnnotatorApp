@@ -21,14 +21,16 @@ function Login () {
     return (
         <div className="app-container container-layout" >
             <div className="letter-container login-text pad-container">
-                <p>Dear Participant,</p>
-                <p>We are pleased to invite you to participate in an important annotation exercise aimed at improving our understanding of online discourse in Malta.</p> 
-                <p>As a participant, you will be provided with a list of comments from the Times of Malta and Malta Today. Your task is to annotate these comments based on the given categories. If a comment does not fit any of the provided labels, please select "Not Offensive." Your valuable input will contribute to creating a dataset that will train a Toxic Comment Classifier AI Model specifically using comments from your news portals.</p>
-                <h5>Important Notes:</h5>
-                <p>1) No personal data will be stored during this exercise.</p>
-                <p>2) You may choose to quit at any time without any consequences..</p>
-                <p>Thank you for considering this opportunity to contribute to our research.</p>
-                <p>Best regards, <br /> Liam Mulvaney.</p>
+                <p>Hi!</p>
+                <p>Thank you for taking part in this annotation exercise. We are carrying out an annotation exercise to build a system that can automatically identify different types of hate speech in Maltese. Therefore, to proceed, you must be a native speaker of Maltese.</p>
+                <p>In the annotation exercise, you will be asked to read a comment/phrase in Maltese and select the appropriate label/s that apply. If you are not comfortable with the type of data or you become uncomfortable at any point during the exercise, please feel free to stop immediately. It is up to you how many comments to annotate.</p>
+                <p>At no point in this exercise will any identifiable information be requested or stored as part of the data collected from our side - we only save the labels that you select from a given list in relation to a particular comment/phrase. No other information is stored and your participation is completely anonymous.</p>
+                <p>In the annotation exercise, you will be presented with one phrase/sentence at a time. You will be given a drop-down menu to choose from. The options available are: Toxicity, Obscene, Sexual Explicit, Identity Attack, Insult, Threat, Not Offensive. You can select more than one label for any phrase/sentence</p>
+                <p>We ask that you consider the comment carefully before selecting a label. In this exercise there is no right or wrong answer - this is your perception of what you believe to be true about the phrase/comment that you will see. Try to provide labels for which you feel certain. </p>
+                <p>Once you submit a label, you will be presented with another phrase/sentence to label. This will continue until you decide to stop.</p>
+                <p>This annotation exercise is being carried out as part of my MSc Thesis under the supervision of Dr Claudia Borg (claudia.borg@um.edu.mt) and Dr Dylan Seychell (dylan.seychell@um.edu.mt). Feel free to contact me if you have any questions on: <strong>liam.m.mulvaney.22@um.edu.mt.</strong></p>
+                <p>Regards,</p>
+                <p>Liam Mulvaney</p>
             </div>
             <div className="login-container container-layout">
                 <Button type="primary" className="btn-login" size="large" onClick={loginLogicAsync}>
