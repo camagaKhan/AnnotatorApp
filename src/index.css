@@ -4,8 +4,8 @@ html, body, #root, .App {
 }
 
 #root {                          
-  background: rgb(238,174,202);
-  background: linear-gradient(109deg, rgba(238,174,202,1) 0%, rgba(148,233,219,0.835171568627451) 100%);                                          
+  background: rgb(0,0,0);
+  background: linear-gradient(337deg, rgba(0,0,0,0.4766281512605042) 0%, rgba(186,12,47,0.7371323529411764) 41%);                                        
 }
 
 body {
@@ -20,4 +20,33 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btn-annotator {
+  background-color: #BA0C2F;
+}
+
+.btn-annotator:hover {
+  background-color: rgba(186,12,47, .6)!important; 
+}
+
+.btn-annotate-dashed:hover {
+  border-color: #BA0C2F !important;
+  color: #BA0C2F !important;
+}
+
+.toolbar {
+  width: 100%;
+  margin-bottom: 5px;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.btn-annotate-dashed {
+  margin-right: 15px;
+}
+
+.UOMLogo {
+  font-size: 50px;
 }

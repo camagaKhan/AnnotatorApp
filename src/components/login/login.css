@@ -11,7 +11,7 @@
 }
 
 .login-container {
-    padding: 10px;
+    padding: 15px;
     width: 50%;
     height: 60px;
     border: 1px solid white;
@@ -24,11 +24,11 @@
     width:50%;
     background-color: white;
     border-radius: 6px;
-    padding: 10px;
+    padding: 15px;
 }
 
 .pad-container {
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .login-text {
@@ -38,6 +38,10 @@
 
 .btn-login {
     width: 100%;
+}
+
+.landing-logo {
+    width: 350px
 }
 
 
@@ -50,7 +54,7 @@
 @media (max-width: 1165px) {
 
     .login-container {
-        padding: 7px;
+        padding: 15px;
         width: 70%;
         height: 60px;
         border: 1px solid white;
@@ -63,7 +67,7 @@
         width:70%;
         background-color: white;
         border-radius: 6px;
-        padding: 7px;        
+        padding: 15px;        
     }
 
     p {
@@ -73,15 +77,23 @@
     .login-text {
         text-align: left;
     }
-  } 
+  }
+  
+@media (max-width: 1604px) {
+    .letter-container {
+        height: 700px;
+    }
+}  
 
-
-
-
+@media (max-width: 597px ) {   
+    .landing-logo {
+        width: 250px
+      }
+}
 
 @media (min-width: 1670px) {
     .letter-container,    .login-container {
-        width: 30%;
+        width: 70%;
         padding:15px;
     }
 }

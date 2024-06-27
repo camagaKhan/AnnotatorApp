@@ -5,10 +5,17 @@ import './login.css'
 import { useContext } from "react";
 import AppContext from "../Hooks/AppContext";
 import { useNavigate } from "react-router-dom";
+import Icon from "@ant-design/icons/lib/components/Icon"
+
+import { ReactComponent as UOM } from '../../Images/CoatOfArms.svg'
+
+const UoMIcon = props => <Icon component={UOM} {...props} className='UOMLogo' />
 
 function Login () {
     const context = useContext(AppContext),
     navigate = useNavigate();
+
+    const imagePath = require('../../Images/ICT_AI_Red Logo.png')
 
     const loginLogicAsync = async () => {
         context.setLoginId()                
@@ -20,7 +27,11 @@ function Login () {
 
     return (
         <div className="app-container container-layout" >
+            
             <div className="letter-container login-text pad-container">
+                <div className="toolbar">
+                    <img src={imagePath} className="landing-logo" alt='Department of AI'/>
+                </div>
                 <p>Hi!</p>
                 <p>Thank you for taking part in this annotation exercise. We are carrying out an annotation exercise to build a system that can automatically identify different types of hate speech in Maltese. Therefore, to proceed, you must be a native speaker of Maltese.</p>
                 <p>In the annotation exercise, you will be asked to read a comment/phrase in Maltese and select the appropriate label/s that apply. If you are not comfortable with the type of data or you become uncomfortable at any point during the exercise, please feel free to stop immediately. It is up to you how many comments to annotate.</p>
@@ -33,7 +44,7 @@ function Login () {
                 <p>Liam Mulvaney</p>
             </div>
             <div className="login-container container-layout">
-                <Button type="primary" className="btn-login" size="large" onClick={loginLogicAsync}>
+                <Button type="primary" className="btn-login btn-annotator" size="large" onClick={loginLogicAsync}>
                     Start
                 </Button>
             </div>  

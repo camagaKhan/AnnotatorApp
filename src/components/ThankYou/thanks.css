@@ -1,4 +1,43 @@
+.thx {
+    display: flex;
+}
+
 .thanks-img {
-    width: 25%;
-    height: 50%
+    background-color: white;
+    height: auto;
+    width: 940px;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.thx-container {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px; 
+    width: 940px
+}
+
+.lnd-page button {
+    color: #BA0C2F !important;
+}
+
+.lnd-page {
+    text-align: center;
+}
+
+@media (max-width: 974px) {
+    .thanks-img, .thx-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 430px) {
+    .thanks-img, .thx-container {
+        width: 70%;
+    }
+
+    .thx-container {
+        overflow: hidden;
+    }
 }

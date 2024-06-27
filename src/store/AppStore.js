@@ -118,7 +118,6 @@ export class AppStore {
             let data = await requests.get('/labels')
             data.push({ LabelID: 7, Labels: 'Not Offensive' })
             this.labels = data
-            console.log(this.labels)
         } catch (error) {
             console.error(error)
             message.error('Could not fetch the target labels. Please try again.') 
