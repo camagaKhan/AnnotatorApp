@@ -18,7 +18,7 @@ const AppRoutes = observer(() => {
       <BrowserRouter basename="/AnnotatorApp">
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/home' element={<Login />} />
           <Route path='/annotateComment/:commentId' 
            element={<CommentWizard />} 
           />
@@ -33,7 +33,7 @@ const AppRoutes = observer(() => {
       <BrowserRouter basename="/AnnotatorApp">
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/home' element={<Login />} />
           <Route path ='/thankyou' element={<Thankyou/> }></Route>
           <Route path='*' element={<div>404 Not Found</div>} />
         </Routes>

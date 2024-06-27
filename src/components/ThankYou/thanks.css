@@ -26,6 +26,10 @@
     text-align: center;
 }
 
+.uom-form, .uom-form:hover {
+    color: #BA0C2F !important;
+} 
+
 @media (max-width: 974px) {
     .thanks-img, .thx-container {
         width: 90%;
